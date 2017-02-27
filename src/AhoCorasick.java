@@ -14,7 +14,7 @@ public class AhoCorasick {
         public String word = null;
 
         public int suffix_link = -1;
-        public int parent = -1;
+        public int parent_link = -1;
 
         public boolean root = false;
         public char letter;
@@ -51,7 +51,7 @@ public class AhoCorasick {
         {
             Node nd = new Node();
             nd.letter = letter;
-            nd.parent = node;
+            nd.parent_link = node;
             trie.add(nd);
 
             trie.get(node).links.put(letter, trie.size()-1);
@@ -80,7 +80,7 @@ public class AhoCorasick {
             else
             {
                 Character letter = trie.get(node).letter;
-                int previous = trie.get(trie.get(node).parent).suffix_link;
+                int previous = trie.get(trie.get(node).parent_link).suffix_link;
 
                 while(!trie.get(previous).links.containsKey(letter) && !trie.get(previous).root)
                 {
@@ -135,7 +135,6 @@ public class AhoCorasick {
             if (trie.get(node).replacement != null) {
 
                 /* Pop back original and push back replacement */
-
                 buffer.setLength(buffer.length() - trie.get(node).word.length() );
                 buffer.append(trie.get(node).replacement);
 
