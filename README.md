@@ -1,10 +1,10 @@
 # IBAN_correction_service
 
-IBAN_correction_service is a service for correcting IBAN account numbers.
+IBAN_correction_service is a service for correcting IBAN account numbers in a given string.
 
 Command line parameters are:</br>
-  -p or --port            listening port</br>
-  -d or --dictionary      dictionary file with corrected and invalid IBAN in the format below:</br>
+  </t>-p or --port            listening port</br>
+  </t>-d or --dictionary      dictionary file with corrected and invalid IBAN in the format below:</br>
 
 correct_IBAN, detected_IBAN new_line</br>
 correct_IBAN, detected_IBAN new_line</br>
