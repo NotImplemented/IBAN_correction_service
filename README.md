@@ -14,7 +14,7 @@ Service facilitates [Aho-Corasick algorithm](https://en.wikipedia.org/wiki/Aho%E
 
 Typical usage scenario is as follows:
 
-<code>
+```java
 try (Socket clientSocket = new Socket(serverHost, serverPort)) {
     System.out.println("Sending query to '" + serverHost + ":" + serverPort + "'...");
 
@@ -38,5 +38,5 @@ try (Socket clientSocket = new Socket(serverHost, serverPort)) {
     e.printStackTrace();
 }
 
-</code>
+```
 
