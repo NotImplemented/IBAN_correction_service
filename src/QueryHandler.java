@@ -41,7 +41,11 @@ public class QueryHandler implements Runnable {
 
                 if (query.getType().equals(Query.correct)) {
 
-                    query.setResult(algorithm.correct(query.getText()));
+                    synchronized (algorithm) {
+
+                        query.setResult(algorithm.correct(query.getText()));
+
+                    }
 
                     String json = gson.toJson(query);
                     System.out.println("Sending response: " + json);
