@@ -2,7 +2,7 @@
 
 IBAN_correction_service is a service for correcting IBAN account numbers in an input string given set of valid->invalid IBAN pairs.
 
-Service facilitates [Aho-Corasick algorithm](https://en.wikipedia.org/wiki/Aho%E2%80%93Corasick_algorithm) to replace set of strings from input string. RESTful is leveraged using Spring library (https://spring.io/). You can use maven or gradle to build application, these build managers will pull or necessary dependencies automatically.
+Service facilitates [Aho-Corasick algorithm](https://en.wikipedia.org/wiki/Aho%E2%80%93Corasick_algorithm) to replace set of strings from input string. RESTful is leveraged using Spring library (https://spring.io/). You can use maven or gradle to build application, these build managers will pull all necessary dependencies automatically.
 
 To start service:
 * Navigate to project root.
